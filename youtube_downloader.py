@@ -38,16 +38,6 @@ def download_youtube_video(url, download_path="."):
         st.error(f"An error occurred: {e}")
 
 def main():
-    # Set background color of the entire app to black
-    st.markdown("""
-        <style>
-            body {
-                background-color: black;
-                color: white;  /* Set text color to white for better visibility */
-            }
-        </style>
-    """, unsafe_allow_html=True)
-
     st.title("YouTube Video Downloader")
 
     # Get YouTube video URL from user
@@ -56,18 +46,7 @@ def main():
     if st.button("Download"):
         download_youtube_video(url)
 
-    # Set red frame around names
-    st.markdown("""
-        <style>
-            .css-1q2q54k {
-                border: 2px solid red;
-                padding: 8px;
-                margin: 8px 0;
-                border-radius: 5px;
-            }
-        </style>
-    """, unsafe_allow_html=True)
-
 if __name__ == "__main__":
     main()
+
 
